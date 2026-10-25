@@ -1,0 +1,23 @@
+EARTH TONE DESIGN STUDIO — SEO DEPLOY CHECKLIST (V4)
+
+CHANGED IN V4
+- Removed the Tailwind browser CDN script. Styles are now served from a compiled, minified tailwind.css (Tailwind v4.3.3, ~38 KB). This removes the runtime CSS compiler and the unstyled-flash risk.
+- Verified offline: computed layout, size, spacing and typography of all 802 elements match v3 at desktop (1440px) and mobile (390px). Only sub-0.01% colour rounding differences exist.
+- Added logo.png (512x512, square, transparent corners), rendered from the existing ET favicon design, and pointed the schema "logo" at it. Replace it with your real logo file (same filename) if you have one.
+
+DEPLOY
+1. Upload ALL files to the same site root: index.html, tailwind.css, logo.png, og-image.jpg, robots.txt, sitemap.xml. index.html will be unstyled if tailwind.css is missing.
+2. Confirm https://www.earthtonedesignstudio.in/ is the preferred domain and any alternate domain (e.g. the vercel.app URL) redirects to it.
+3. Confirm hello@earthtonedesignstudio.in is a working mailbox.
+4. Optional: add long cache headers for tailwind.css, logo.png and og-image.jpg; if you update tailwind.css later, rename it (e.g. tailwind.v2.css) and update the link in index.html.
+5. Test: Meta Sharing Debugger (refresh WhatsApp preview), Google Rich Results Test, PageSpeed Insights.
+6. Submit /sitemap.xml in Google Search Console.
+
+STILL NEEDS YOUR REAL DATA (not invented here)
+- Google Business Profile share URL, plus Instagram/LinkedIn/Behance links: add as "sameAs" in the Architect JSON-LD.
+- GA4 Measurement ID and Search Console verification token.
+- Original, useful service/area pages before adding them to the sitemap.
+
+LIMITATIONS
+- No live PageSpeed, Rich Results or WhatsApp test was possible offline. No ranking can be guaranteed.
+- If you later add new Tailwind classes to index.html, recompile tailwind.css.
